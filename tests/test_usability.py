@@ -13,3 +13,4 @@ class TestUsability(TestCase):
         
         joined = urlparse2.urljoin(result)
         self.AssertEquals(url, expect)
+
