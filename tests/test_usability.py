@@ -11,6 +11,5 @@ class TestUsability(TestCase):
         result = urlparse2.urlparse(url)
         result.scheme = 'https'
         
-        joined = urlparse2.urljoin(result)
-        self.AssertEquals(url, expect)
-
+        joined = urlparse2.urlunparse(result)
+        self.assertEquals(joined, expect)
