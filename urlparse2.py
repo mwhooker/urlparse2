@@ -1,15 +1,8 @@
 # encoding: utf-8
 from recordtype import recordtype
 
-import sys
-
-_already_loaded = False
-if 'urlparse' in sys.modules:
-    _already_loaded = True
-    del sys.modules['urlparse']
-
-import urlparse as urlparse1
-from urlparse import *
+import urlparse1
+from urlparse1 import *
 
 
 class ParseResult(recordtype('ParseResult', 'scheme netloc path params query fragment'), urlparse1.ResultMixin):
@@ -37,7 +30,3 @@ def urljoin(base, url, allow_fragments=True):
     if not parsed.scheme or not parsed.netloc:
         raise ValueError("Invalid base url")
     return urlparse1.urljoin(base, url, allow_fragments=allow_fragments)
-
-
-if not _already_loaded:
-    del sys.modules['urlparse']

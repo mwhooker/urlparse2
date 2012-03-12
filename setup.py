@@ -1,26 +1,18 @@
 # encoding: utf-8
-import os.path
-import subprocess
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
-def version():
-    cwd = os.path.dirname(os.path.abspath(__file__))
-    p = subprocess.Popen('git log --oneline | wc -l',
-                         stdout=subprocess.PIPE,
-                         cwd=cwd, shell=True)
-    lines = int(p.communicate()[0].strip())
-
-    return "0." + "9" * lines
-
 
 setup(
     name='urlparse2',
-    version=version(),
+    version='1.0',
     description='urlparse for humans.',
-    author="Hooker Avnet Chisholm Toshi0, GmBH",
+    long_description='A drop-in replacement for urlparse with enhancements.'
+        'Provides mutable ParseResult fields and error handling for invalid'
+        'domains passed to urljoin.',
+    author='Matthew Hooker, Jeremy Avnet, Matt Chisholm',
     url='https://github.com/mwhooker/urlparse2',
     install_requires=['recordtype'],
     license='MIT',
