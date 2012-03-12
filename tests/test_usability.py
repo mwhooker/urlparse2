@@ -3,6 +3,14 @@ import urlparse2
 from unittest import TestCase
 
 
+def test_no_overwrite_urlparse_module():
+    class OverwrittenByABunchOfAssholes: pass
+    urlparse2.urlparse1.urlparse = OverwrittenByABunchOfAssholes
+
+    import urlparse
+    assert urlparse.urlparse is not OverwrittenByABunchOfAssholes
+
+
 class TestUsability(TestCase):
 
     def test_scheme_is_mutable(self):
