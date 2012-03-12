@@ -26,3 +26,8 @@ class SplitResult(recordtype('SplitResult', 'scheme netloc path query fragment')
 
 urlparse1.ParseResult = ParseResult
 urlparse1.SplitResult = SplitResult
+
+def urljoin(base, url, allow_fragments=True):
+    if not urlparse1.urlparse(base).scheme:
+        raise ValueError("Invalid base url")
+    return urlparse1.urljoin(base, url, allow_fragments=allow_fragments)
