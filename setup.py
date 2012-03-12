@@ -1,13 +1,24 @@
 # encoding: utf-8
+import os.path
+import subprocess
 try:
     from setuptools import setup
 except ImportError:
     from distutils.core import setup
 
+def version():
+    cwd = os.path.dirname(os.path.abspath(__file__))
+    p = subprocess.Popen('git log --oneline | wc -l',
+                         stdout=subprocess.PIPE,
+                         cwd=cwd, shell=True)
+    lines = int(p.communicate()[0].strip())
+
+    return "0." + "9" * lines
+
 
 setup(
     name='urlparse2',
-    version='0.99999999999999999999',
+    version=version(),
     description='urlparse for humans.',
     author="Hooker Avnet Chisholm Toshi0, GmBH",
     url='https://github.com/mwhooker/urlparse2',
