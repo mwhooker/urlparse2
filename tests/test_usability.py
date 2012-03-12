@@ -1,10 +1,11 @@
+# encoding: utf-8
 import urlparse2
 from unittest import TestCase
 
 
 class TestUsability(TestCase):
 
-    def test_mutability(self):
+    def test_scheme_is_mutable(self):
         url = 'http://www.cwi.nl:80/%7Eguido/Python.html'
         expect = 'https://www.cwi.nl:80/%7Eguido/Python.html'
 
