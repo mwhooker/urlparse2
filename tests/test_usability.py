@@ -20,6 +20,13 @@ class TestUsability(TestCase):
         joined = urlparse2.urlunparse(result)
         self.assertEquals(joined, expect)
 
+    def test_flexible_schema(self):
+        url = 'yourmom://resource:1234'
+
+        result = urlparse2.urlparse(url)
+        joined = urlparse2.urlunparse(result)
+        self.assertEquals(joined, url)
+
     def test_protocolless_urlprefix(self):
         prefix = 'domain.com'
         path = 'path/to/file'
