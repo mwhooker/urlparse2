@@ -13,6 +13,7 @@ setup(
         'Provides mutable ParseResult fields and error handling for invalid'
         'domains passed to urljoin.',
     author='Matthew Hooker, Jeremy Avnet, Matt Chisholm',
+    author_email="mwhooker@gmail.com",
     url='https://github.com/mwhooker/urlparse2',
     install_requires=['recordtype'],
     license='MIT',
