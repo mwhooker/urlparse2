@@ -19,7 +19,7 @@ class TestUsability(TestCase):
         path = 'path/to/file'
         expect = 'domain.com/path/to/file'
 
-        self.assertRaises(ValueError, urlparse2.urljoin, (result, expect))
+        self.assertRaises(ValueError, urlparse2.urljoin, (prefix, path))
 
     def test_protocolfull_urlprefix(self):
         prefix = 'http://domain.com'
