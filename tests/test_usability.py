@@ -3,11 +3,6 @@ import urlparse2
 from unittest import TestCase
 
 
-def test_no_overwrite_urlparse_module():
-    import urlparse
-    assert urlparse.ParseResult is not urlparse2.ParseResult, "it is"
-
-
 class TestUsability(TestCase):
 
     def test_scheme_is_mutable(self):
@@ -21,7 +16,7 @@ class TestUsability(TestCase):
         self.assertEquals(joined, expect)
 
     def test_flexible_schema(self):
-        url = 'yourmom://resource:1234'
+        url = 'zzyzx://chub'
 
         result = urlparse2.urlparse(url)
         joined = urlparse2.urlunparse(result)
@@ -30,7 +25,6 @@ class TestUsability(TestCase):
     def test_protocolless_urlprefix(self):
         prefix = 'domain.com'
         path = 'path/to/file'
-        expect = 'domain.com/path/to/file'
 
         self.assertRaises(ValueError, urlparse2.urljoin, prefix, path)
 
