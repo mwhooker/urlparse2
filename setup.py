@@ -1,4 +1,4 @@
-
+# encoding: utf-8
 try:
     from setuptools import setup
 except ImportError:
@@ -7,13 +7,11 @@ except ImportError:
 
 setup(
     name='urlparse2',
-    version='1.0',
+    version='0.99999999999999',
     description='urlparse for humans.',
     author="Hooker Avnet Chisholm Toshi0, GmBH",
     url='https://github.com/mwhooker/urlparse2',
-    install_requires=[
-        'recordtype',
-    ],
+    install_requires=['recordtype'],
     license='MIT',
     classifiers=(
         'Development Status :: 5 - Production/Stable',
@@ -21,6 +19,7 @@ setup(
         'Natural Language :: English',
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: <= 3.9',
+        'Programming Language :: Python :: 2.6',
+        'Programming Language :: Python :: 2.7',
     ),
 )
