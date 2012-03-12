@@ -7,7 +7,7 @@ except ImportError:
 
 setup(
     name='urlparse2',
-    version='0.99999999999999',
+    version='0.99999999999999999999',
     description='urlparse for humans.',
     author="Hooker Avnet Chisholm Toshi0, GmBH",
     url='https://github.com/mwhooker/urlparse2',
