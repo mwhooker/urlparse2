@@ -7,7 +7,7 @@ except ImportError:
 
 setup(
     name='urlparse2',
-    version=u'\u25cc\u03059',
+    version='1.0',
     description='urlparse for humans.',
     long_description='A drop-in replacement for urlparse with enhancements.'
         'Provides mutable ParseResult fields and error handling for invalid'
