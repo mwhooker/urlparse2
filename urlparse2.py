@@ -28,6 +28,7 @@ urlparse1.ParseResult = ParseResult
 urlparse1.SplitResult = SplitResult
 
 def urljoin(base, url, allow_fragments=True):
-    if not urlparse1.urlparse(base).scheme:
+    parsed = urlparse1.urlparse(base)
+    if not parsed.scheme or not parsed.netloc:
         raise ValueError("Invalid base url")
     return urlparse1.urljoin(base, url, allow_fragments=allow_fragments)
