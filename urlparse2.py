@@ -16,4 +16,13 @@ class ParseResult(recordtype('ParseResult', 'scheme netloc path params query fra
         return urlparse1.urlunparse(self)
 
 
+class SplitResult(recordtype('SplitResult', 'scheme netloc path query fragment'), urlparse1.ResultMixin):
+
+    __slots__ = ()
+
+    def geturl(self):
+        return urlparse1.urlunsplit(self)
+
+
 urlparse1.ParseResult = ParseResult
+urlparse1.SplitResult = SplitResult
