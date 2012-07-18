@@ -12,7 +12,7 @@ setup(
     author='Matthew Hooker & Jeremy Avnet & Matt Chisholm',
     author_email="mwhooker@gmail.com",
     url='https://github.com/mwhooker/urlparse2',
-    packages=['urlparse2'],
+    py_modules=['urlparse1', 'urlparse2'],
     install_requires=['recordtype'],
     license='MIT',
     classifiers=(
