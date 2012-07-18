@@ -1,8 +1,8 @@
 # encoding: utf-8
 from recordtype import recordtype
 
-from urlparse2 import urlparse1
-from urlparse2.urlparse1 import *
+from . import urlparse1
+from .urlparse1 import *
 
 
 __all__ = urlparse1.__all__ + ['ParseResult', 'SplitResult', 'urljoin']
