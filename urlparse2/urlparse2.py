@@ -1,9 +1,11 @@
 # encoding: utf-8
 from recordtype import recordtype
 
-import urlparse1
-from urlparse1 import *
+from urlparse2 import urlparse1
+from urlparse2.urlparse1 import *
 
+
+__all__ = urlparse1.__all__ + ['ParseResult', 'SplitResult', 'urljoin']
 
 class ParseResult(recordtype('ParseResult', 'scheme netloc path params query fragment'), urlparse1.ResultMixin):
 
