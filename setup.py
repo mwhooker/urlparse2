@@ -4,7 +4,7 @@ from setuptools import setup
 
 setup(
     name='urlparse2',
-    version='1.1',
+    version='1.1.1',
     description='urlparse for humans.',
     long_description='A drop-in replacement for urlparse with enhancements.'
         'Provides mutable ParseResult fields and error handling for invalid'
